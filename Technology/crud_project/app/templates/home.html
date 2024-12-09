@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="icon" type="image/x-icon" href="../static/image/logo1.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          {% if edit %}
+          <form action="{% url 'save' %}" method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="name" class="form-label">Enter Name:</label>
+              <input
+                type="text"
+                name="name"
+                class="form-control"
+                id="name"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="age" class="form-label">Enter Age</label>
+              <input
+                type="number"
+                name="age"
+                class="form-control"
+                id="age"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Enter Email</label>
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                id="email"
+                aria-describedby="emailHelp"
+              />
+              <div id="email" class="form-text">
+                We'll never share your email with anyone else.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="phone_number" class="form-label"
+                >Enter Your Phone number:</label
+              >
+              <input
+                type="number"
+                name="phone_number"
+                class="form-control"
+                id="phone_number"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="branch" class="form-label"
+                >Enter Your Phone Branch:</label
+              >
+              <input
+                type="text"
+                name="branch"
+                class="form-control"
+                id="branch"
+              />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+         
+
+          {% else %}
+          <form action="{% url 'save' %}" method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="name" class="form-label">Enter Name:</label>
+              <input
+                type="text"
+                name="name"
+                class="form-control"
+                id="name"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="age" class="form-label">Enter Age</label>
+              <input
+                type="number"
+                name="age"
+                class="form-control"
+                id="age"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Enter Email</label>
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                id="email"
+                aria-describedby="emailHelp"
+              />
+              <div id="email" class="form-text">
+                We'll never share your email with anyone else.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="phone_number" class="form-label"
+                >Enter Your Phone number:</label
+              >
+              <input
+                type="number"
+                name="phone_number"
+                class="form-control"
+                id="phone_number"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="branch" class="form-label"
+                >Enter Your Phone Branch:</label
+              >
+              <input
+                type="text"
+                name="branch"
+                class="form-control"
+                id="branch"
+              />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          {% endif %}
+        </div>
+        <div class="col-md-6">
+          {% if users %}
+          <table class="table dark">
+            <thead class="dark">
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Age</th>
+                <th scope="col">mobile</th>
+                <th scope="col">Branch</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for user in users %}
+              <tr>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.age}}</td>
+                <td>{{user.phone_number}}</td>
+                <td>{{user.branch}}</td>
+                <td>
+                  <a href="{% url 'edit' %}"><i class="fa fa-edit"></i></a>
+                  |
+                  <a href=""><i class="fa fa-delete"> Delete </i></a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+
+
+{% extends "layouts/alayout.html" %}
+{% load static %}
+
+
+{% block title %}view complaint{% endblock %}
+
+
+{% block css %}
+
+<style>
+
+</style>
+
+{% endblock %}
+
+{% block admin %}
+<h1 class="text-center text-3xl font-semibold">View Complaint</h1>
+<div class="min-h-screen my-2 container-fluid">
+  
+    <table class="table table-bordered">
+      <thead>
+        <tr class="table-dark text-center">
+          <th>#</th>
+          <th>Name</th>
+          <th>Program</th>
+          <th>Branch</th>
+          <th>Contact No.</th>
+          <th> Email Address</th>
+          <th>Subject</th>
+          <th>Feedback Text </th>
+          <th>Posted Date </th>
+        </tr>
+      <tbody class="bg-blue-100">
+        
+        <tr class="text-center">
+          <td>1</td>
+          <td>Diploma</td>
+          <td>Computer Science</td>
+          <td>First Year</td>
+          <td>C Language</td>
+          <td>Python</td>
+          <td>Python</td>
+          <td>Python</td>
+          <td>Python</td>
+
+          
+        </tr>
+       
+      </tbody>
+      </thead>
+    </table>
+</div>
+{% endblock %}
+{% block js %}{% endblock %}

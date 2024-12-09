@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif!;
+}
+section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+a{
+    color: blue;
+    text-decoration: none;
+}
+.h1{
+    color: rgb(255, 77, 0);
+}
+.bg-red{
+    background-color: rgb(130, 14, 14);
+}
+.b1{
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    margin: 2;
+}
+.my-icon1 {
+    border: 1px solid darkred;
+    font-size: 20px;
+    color: #5cb874;
+    width: 33px;
+    height: 33px;
+    background: #fbfbfb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    left: 2wv;
+}
+.topbar {
+    background: darkred;
+    border-bottom: 2px dotted orange;
+    min-height: 5vh;
+    display: flex;
+}
+.topbar1 {
+    display: flex;
+}
+.section-title {
+    padding-bottom: 40px;
+}
+.section-title p {
+    margin: 0;
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #000;
+}
+.section-title span {
+    color: darkred;
+}
+.section-title h2 {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    line-height: 1px;
+    margin: 10px 0 5px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    font-family: "Poppins", sans-serif;
+}
+.section-title h2::after {
+    content: "";
+    width: 120px;
+    height: 1px;
+    display: inline-block;
+    background: #fd9042;
+    margin: 4px 10px;
+}
+.about .video-box {
+    background: url(../image/thumbnail.jpg) center center no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+    height: 35vh;
+    width: 80%;
+    box-shadow: 5px 5px 20px #ddd;
+    position: relative;
+    right: 7.4rem;
+    top: 4rem;
+}
+.about .play-btn {
+    width: 94px;
+    height: 94px;
+    background: radial-gradient(rgba(255, 0, 0, .9) 50%, rgba(255, 255, 255, .3) 52%);
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    left: calc(50% - 47px);
+    top: calc(50% - 47px);
+    overflow: hidden;
+}
+.about .play-btn::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation: pulsate-btn 2s;
+    animation: pulsate-btn 2s;
+    -webkit-animation-direction: forwards;
+    animation-direction: forwards;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: steps;
+    animation-timing-function: steps;
+    opacity: 1;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 2, 2, 0.7);
+    top: -15%;
+    left: -15%;
+    background: rgba(255, 0, 0, 0.7);
+}
+.about .play-btn::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-40%) translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #fff;
+    z-index: 100;
+    transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.portal {
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(255, 255, 255, .5)), url(../img/bg.jpg);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 40vh;
+}
+.card_outer {
+    min-height: 320px;
+    position: relative;
+    text-align: center;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05), inset -5px -5px 5px rgba(255, 255, 255, 0.5), 5px 5px 5px rgba(0, 0, 0, 0.05), -5px -5px 5px rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+}
+.card_outer .card_box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: #fafafa;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card_outer .card_box .card_content {
+    padding: 20px;
+}
+.card_outer .card_box .card_content .services_ic {
+    background: darkred;
+    color: white;
+}
+.card_outer .card_box .card_content span {
+    font-size: 30px;
+    background: #d72d24;
+    color: white;
+    border-radius: 50%;
+    padding: 7%;
+    transform: translateY(-30px);
+}
+.card_outer .card_box .card_content .txt {
+    color: #003366;
+    text-align: center;
+    padding-top: 0;
+    font-size: .9rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 520;
+}
+.card_outer .card_box .card_content a {
+    font-size: .9em;
+    color: darkred;
+    font-family: "poppins", sans-serif;
+    font-weight: 600;
+    background: orange;
+    padding: 10px 20px;
+    border-radius: 40px;
+    z-index: 111;
+    transition: all ease 0.5s;
+    font-family: "poppins", sans-serif;
+}
+.services .image1 {
+    border: 1px solid #ddd;
+}
+
+.services .text h4 {
+    background: darkred;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: .9rem;
+    text-align: center;
+}
+.team {
+    background: #ccc;
+    padding: 60px 0;
+}
+.team .member {
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.team .member .member-img {
+    position: relative;
+    overflow: hidden;
+}
+.team .member .member-img img {
+    height: 20vh;
+    border-radius: 50%;
+    border: 4px double darkred;
+}
+.team .member .social {
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    right: 0;
+    opacity: 0;
+    transition: ease-in-out 0.3s;
+    text-align: center;
+}
+.team .member .social h4 {
+    transition: color 0.3s;
+    font-size: 1.2rem;
+    transition: ease-in-out 0.3s;
+    color: orange;
+}
+.team .member .member-info {
+    padding: 25px 15px;
+}
+.team .member .social:hover h4, span {
+    color: orange;
+    font-weight: 700;
+}
+.team .member .member-info h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: darkred;
+    text-align: center;
+}
+.team .member .member-info span {
+    display: block;
+    font-size: 13px;
+    text-align: center;
+    font-weight: 400;
+    color: #000;
+}
+
+.testimonials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 375px;
+    perspective: 500px;
+    margin-top: 3rem;
+    overflow: hidden;
+}
+.testimonials-slider {
+    overflow: hidden;
+}
+.testimonials .swiper-pagination {
+    margin-top: 20px;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 909px) {
+    .topbar {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .topbar1 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .about .video-box {
+        margin-left: 9rem;
+        height: 20vh;
+    }
+}

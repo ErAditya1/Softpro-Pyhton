@@ -1,0 +1,52 @@
+
+
+{% extends "layouts/alayout.html" %}
+{% load static %}
+
+
+{% block title %}admin_dashboard{% endblock %}
+
+
+{% block css %}
+
+<style>
+  
+</style>
+
+{% endblock %}
+
+{% block admin %}
+<h1 class="text-center text-3xl font-semibold">Welcome student Management </h1>
+{% if students %}
+<div class="container-fluid">
+  
+  <table class="table table-bordered">
+    <thead>
+      <tr class="table-dark text-center">
+        <th>studentnames</th>
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>Email</th>
+        <th>student type</th>
+        <th>Action</th>
+      </tr>
+    <tbody class="">
+      {% for student in students %}
+      <tr class="text-center">
+        <td>{{ student.studentname }}</td>
+        <td>{{ student.first_name  }} {{student.last_name}}</td>
+        <td>{{ student.mobile }}</td>
+        <td>{{ student.email }}</td>
+        <td>{{ student.student_type }}</td>
+        <td>
+          <a href=""><i class="fa-solid fa-pen-to-square"></i></a> |
+          <a href=""><i class="fa-solid fa-trash" style="color: #ab0303;"></i></a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+    </thead>
+  </table>
+</div>
+{% endif %}
+{% endblock %}

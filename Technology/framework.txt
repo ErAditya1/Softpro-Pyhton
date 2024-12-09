@@ -1,0 +1,30 @@
+
+
+                                                                                    (database)
+                                                                             <---->  models.py
+                                                            (backend)
+
+user -----> Django Server -----> Urls Resolver ----> Urls.py ----> Views.py  -------
+                                                            
+                                                            (logic)          <-----> templates
+                                                                                    (frontend)
+                                                                
+request     settings.py         project        App    app
+
+
+    project 
+            ---- urls.py
+            ----app
+                   ---- urls.py
+                   ---- views.py
+                   ---- models.py
+                   ---- template
+
+
+cmd: 1---> pip install Django                           -----> installation of django
+cmd: 2---> python -m django --version     
+cmd: 3---> django-admin startproject project_name      -----> Creation of project
+cmd: 4---> python manage.py startapp app_name              -----> creation of app
+cmd: 5---> python manage.py runserver                   -----> runserver (app start)
+
+

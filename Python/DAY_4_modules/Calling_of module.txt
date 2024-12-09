@@ -1,0 +1,13 @@
+1) import time
+         time.sleep(1)
+2) from time import *
+        sleep(1)
+3) from time import sleep
+        sleep(1)
+        Aliasic of module
+4) import time as t
+        t.sleep(1)
+
+5) from time import sleep as sl
+        sp(1)
+        
